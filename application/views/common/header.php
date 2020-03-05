@@ -1,5 +1,3 @@
-<?php /* application/views/common/header.php */ ?>
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
