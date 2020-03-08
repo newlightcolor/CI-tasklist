@@ -50,7 +50,7 @@
                         <td>
                             <?php
 
-                                echo calc($item['created_at']);
+                                echo $this->interval_lib->calc($item['created_at']);
 
                             // $today = new DateTime();
                             // $created = new DateTime($item['created_at']);
