@@ -49,10 +49,13 @@
                         <td><?php echo html_escape($item['task_name']); ?></td>
                         <td>
                             <?php
-                            $today = new DateTime();
-                            $created = new DateTime($item['created_at']);
-                            $interval = $today->diff($created);
-                            echo $interval->format('%a日前');
+
+                                echo calc($item['created_at']);
+
+                            // $today = new DateTime();
+                            // $created = new DateTime($item['created_at']);
+                            // $interval = $today->diff($created);
+                            // echo $interval->format('%a日前');
                             ?>
                         </td>
                     </tr>

@@ -2,6 +2,7 @@
 
 class Task extends CI_Controller {
   public function index() {
+    $this->load->helper('interval_helper');
 
     if($this->input->post()) {
       $this->form_validation->set_rules('task', 'タスク', 'required|min_length[1]|max_length[20]');
