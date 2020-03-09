@@ -1,10 +1,8 @@
 <?php $this->load->view('common/header'); ?>
 
-</head>
 <body>
 <header class="container">
-    <h1>CodeIgniter超入門</h1>
-    <h2>チュートリアル「タスクリストを作ってみよう」</h2>
+    <h1>CodeIgniter de Tasklist</h1>
 </header>
 <div class="container">
     <form method="POST">
@@ -32,7 +30,7 @@
     ?>
 
 
-    <table class="table table-inverse">
+    <table class="table table-inverse mt-3 bg-dark text-white">
         <thead>
         <tr>
             <th>ID</th>
@@ -69,5 +67,7 @@
     </table>
 
 </div>
+
+<?php $this->load->view('common/read_bootstrap'); ?>
 </body>
 </html>
