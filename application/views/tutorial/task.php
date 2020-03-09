@@ -35,6 +35,7 @@
     <table class="table table-inverse">
         <thead>
         <tr>
+            <th>ID</th>
             <th>タスク</th>
             <th>登録日</th>
         </tr>
@@ -46,6 +47,7 @@
                 {
                     ?>
                     <tr>
+                        <td><?php echo html_escape($item['id']); ?></td>
                         <td><?php echo html_escape($item['task_name']); ?></td>
                         <td>
                             <?php
