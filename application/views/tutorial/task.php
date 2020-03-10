@@ -5,6 +5,7 @@
     <h1>Tasklist</h1>
 </header>
 <div class="container">
+    <div class="bg-light">
     <form method="POST">
         <div class="form-group">
             <label for="exampleInputEmail1">新規タスク</label>
@@ -12,6 +13,7 @@
         </div>
         <button type="submit" class="btn btn-primary btn-block">タスク追加</button>
     </form>
+    </div>
 
     <?php
         if(isset($create) and $create === true){   // $data["create"]がtrueの時に表示されます
@@ -30,22 +32,24 @@
     ?>
 
 
-    <table class="table table-inverse mt-3 bg-dark text-white">
-        <thead>
+    <table class="table table-inverse mt-3 table-hover text-dark table-bordered">
+        <thead class="thead-dark">
         <tr>
             <th>ID</th>
+            <th></th>
             <th>タスク</th>
             <th>登録日</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody class="tbody-light">
             <?php
             if(isset($task_list) and count($task_list) > 0){
                 foreach($task_list as $item)
                 {
                     ?>
                     <tr>
-                        <td><a href="<?php echo site_url('task/'.$item['id']);?>"> <?php echo html_escape($item['id']); ?> </a></td>
+                        <td><a href="<?php echo site_url('task/'.$item['id']);?>" class="text-primary"> <?php echo html_escape($item['id']); ?> </a></td>
+                        <td><a href="<?php echo site_url('task/delete/'.$item['id']);?>" class="btn btn-success my-0 py-1">完了</a></td>
                         <td><?php echo html_escape($item['task_name']); ?></td>
                         <td>
                             <?php

@@ -26,17 +26,19 @@ class Task extends CI_Controller {
   {
     $data['task_item'] = $this->task_model->get_task($id);
 
-    // if (empty($data['task_item']))
-    // {
-    //         show_404();
-    // }
+    // URLで指定されたタスクが無ければ404を表示
+    if (empty($data['task_item'])){show_404();}
 
     $data['task_name'] = $data['task_item']['task_name'];
 
     $this->load->view('common/header', $data);
     $this->load->view('task_detail', $data);
+  }
 
-    // $this->load->view('testpage');
+  public function delete($id = NULL)
+  {
+    $this->db->delete('task', array('id' => $id));
 
+    redirect('');
   }
 }
