@@ -8,14 +8,30 @@ class Task_model extends CI_Model
     $this->config->load();
   }
 
-  public function lists() {
-    $per_page = $this->config->item('per_page');
-    $query = $this->db->get('task', $per_page);
-    if ($query->num_rows() > 0) {
+  // public function lists() {
+  //   $per_page = $this->config->item('per_page');
+  //   $query = $this->db->get('task', $per_page);
+  //   if ($query->num_rows() > 0) {
+  //     return $query->result_array();
+  //   } else {
+  //     return [];
+  //   }
+  // }
+
+  public function get_task($id = FALSE)
+  {
+    if ($id === FALSE) // ID指定が無ければ、全取得
+    {
+      // SELECT * FROM task
+      $query = $this->db->get('task');
+
+      // 結果を配列で取得する
       return $query->result_array();
-    } else {
-      return [];
     }
+
+    // SELECT * FROM task WHERE 'id' = $id;
+    $query = $this->db->get_where('task', array('id' => $id));
+    return $query->row_array();
   }
 
   public function create($task) {
