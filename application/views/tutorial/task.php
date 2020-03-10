@@ -2,7 +2,7 @@
 
 <body>
 <header class="container">
-    <h1>CodeIgniter de Tasklist</h1>
+    <h1>Tasklist</h1>
 </header>
 <div class="container">
     <form method="POST">
@@ -45,7 +45,7 @@
                 {
                     ?>
                     <tr>
-                        <td><?php echo html_escape($item['id']); ?></td>
+                        <td><a href="<?php echo site_url('task/'.$item['id']);?>"> <?php echo html_escape($item['id']); ?> </a></td>
                         <td><?php echo html_escape($item['task_name']); ?></td>
                         <td>
                             <?php

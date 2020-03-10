@@ -16,7 +16,25 @@ class Task extends CI_Controller {
       }
     }
 
-    $data['task_list'] = $this->task_model->lists();
+    $data['task_list'] = $this->task_model->get_task();
     $this->load->view('tutorial/task', $data);
+  }
+
+  public function show($id = NULL)
+  {
+    $data['task_item'] = $this->task_model->get_task($id);
+
+    // if (empty($data['task_item']))
+    // {
+    //         show_404();
+    // }
+
+    $data['task_name'] = $data['task_item']['task_name'];
+
+    $this->load->view('common/header', $data);
+    $this->load->view('task_detail', $data);
+
+    // $this->load->view('testpage');
+
   }
 }
