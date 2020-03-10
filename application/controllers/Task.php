@@ -1,7 +1,9 @@
 <?php
 
 class Task extends CI_Controller {
-  public function index() {
+
+  public function index()
+  {
     // $this->load->helper('interval_helper');
     $this->load->library('interval_lib');
 
