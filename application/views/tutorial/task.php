@@ -6,13 +6,13 @@
 </header>
 <div class="container">
     <div class="bg-light">
-    <form method="POST">
-        <div class="form-group">
-            <label for="exampleInputEmail1">新規タスク</label>
-            <input type="text" name="task" class="form-control" placeholder="タスク名" required>
-        </div>
-        <button type="submit" class="btn btn-primary btn-block">タスク追加</button>
-    </form>
+        <form method="POST">
+            <div class="form-group">
+                <label for="task">新規タスク</label>
+                <input id="task" type="text" name="task" class="form-control" placeholder="タスク名" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">タスク追加</button>
+        </form>
     </div>
 
     <?php
@@ -49,7 +49,7 @@
                     ?>
                     <tr>
                         <td><a href="<?php echo site_url('task/'.$item['id']);?>" class="text-primary"> <?php echo html_escape($item['id']); ?> </a></td>
-                        <td><a href="<?php echo site_url('task/delete/'.$item['id']);?>" class="btn btn-success my-0 py-1">完了</a></td>
+                        <td><a href="<?php echo site_url('task/delete/'.$item['id']);?>" class="btn btn-success btn-block my-0 py-1">完了</a></td>
                         <td><?php echo html_escape($item['task_name']); ?></td>
                         <td>
                             <?php
