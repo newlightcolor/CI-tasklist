@@ -48,7 +48,7 @@
                 {
                     ?>
                     <tr>
-                        <td><a href="<?php echo site_url('task/'.$item['id']);?>" class="text-primary"> <?php echo html_escape($item['id']); ?> </a></td>
+                        <td><a href="<?php echo site_url('task/edit/'.$item['id']);?>" class="text-primary"> <?php echo html_escape($item['id']); ?> </a></td>
                         <td><a href="<?php echo site_url('task/delete/'.$item['id']);?>" class="btn btn-success btn-block my-0 py-1">完了</a></td>
                         <td><?php echo html_escape($item['task_name']); ?></td>
                         <td>

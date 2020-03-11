@@ -39,4 +39,12 @@ class Task_model extends CI_Model
     $this->db->insert('task', $data);
   }
 
+  public function update($task, $id) {
+    $data = array(
+      'id' => $id,
+      'task_name' => $task,
+    );
+    $this->db->replace('task', $data);
+  }
+
 }
