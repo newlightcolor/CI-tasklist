@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark nav fixed-top">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark nav fixed-top h-10">
     <a class="navbar-brand" href="<?php echo base_url(''); ?>" style="font-size: 30px"><i class="fas fa-pastafarianism"></i> Tasklist</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="ナビゲーションの切替">
       <span class="navbar-toggler-icon"></span>
