@@ -53,7 +53,8 @@ class Task extends CI_Controller {
       $this->form_validation->set_rules('task', 'タスク', 'required|min_length[1]|max_length[20]');
   
       if ($this->form_validation->run()){
-        $this->task_model->update($this->input->post('task'), $id);
+        $timestamp = $data['task_item']['created_at'];
+        $this->task_model->update($this->input->post('task'), $id, $timestamp);
         redirect(site_url('task/'));
       } else {
         $data['create'] = false;
