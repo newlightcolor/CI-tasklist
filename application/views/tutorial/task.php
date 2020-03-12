@@ -1,12 +1,13 @@
 <?php $this->load->view('common/header'); ?>
 
 <body>
-<header class="container">
-    <h1>Tasklist</h1>
+<header class="py-0">
+    <?php $this->load->view('common/navbar'); ?>
 </header>
 <div class="container">
+    <div style="height: 90px"></div>
     <div class="bg-light">
-        <form method="POST">
+        <form method="POST" class="my-3">
             <div class="form-group">
                 <label for="task">新規タスク</label>
                 <input id="task" type="text" name="task" class="form-control" placeholder="タスク名" required>
