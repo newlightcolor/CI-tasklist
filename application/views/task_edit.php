@@ -1,6 +1,5 @@
-<?php
-    $this->load->view('common/header'); 
-?>
+<?php $this->load->view('common/header'); ?>
+
 <header>
     <h2>タスクID : <?php echo $task_item['id']; ?>の編集ページ</h2>
 </header>
