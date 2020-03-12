@@ -35,10 +35,10 @@
     <table class="table table-inverse mt-3 table-hover text-dark table-bordered">
         <thead class="thead-dark">
         <tr>
-            <th>ID</th>
-            <th></th>
-            <th>タスク</th>
-            <th>登録日</th>
+            <th style="width:5%">ID</th>
+            <th style="width:8%"></th>
+            <th style="width:77%">タスク</th>
+            <th style="width:10%">登録日</th>
         </tr>
         </thead>
         <tbody class="tbody-light">
