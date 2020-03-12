@@ -23,14 +23,15 @@ class Task_model extends CI_Model
     if ($id === FALSE) // ID指定が無ければ、全取得
     {
       // SELECT * FROM task
-      $query = $this->db->get('task');
+      $query = $this->db->query("select * from task");
 
       // 結果を配列で取得する
       return $query->result_array();
     }
 
     // SELECT * FROM task WHERE 'id' = $id;
-    $query = $this->db->get_where('task', array('id' => $id));
+    // $query = $this->db->get_where('task', array('id' => $id));
+    $query = $this->db->query("select * from task where id = $id");
     return $query->row_array();
   }
 
