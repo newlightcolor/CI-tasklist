@@ -51,10 +51,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 // $route['default_controller'] = 'welcome';
-$route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
-
 $route ['task/(:any)'] = 'task/show/$1';
 $route['task'] = 'task';
-$route['(:any)'] = 'task';
 $route[('default_controller')] = 'task';
