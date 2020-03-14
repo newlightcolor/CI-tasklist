@@ -5,7 +5,6 @@
     <?php $this->load->view('common/navbar'); ?>
 </header>
 <div class="container">
-    <div style="height: 90px"></div>
     <div class="bg-light">
         <form method="POST" class="my-3">
             <div class="form-group">
