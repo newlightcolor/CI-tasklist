@@ -1,6 +1,7 @@
 <?php $this->load->view('common/header');?>
 
 <body>
+    <?php $this->load->view('common/navbar'); ?>
     <div class="container">
         <h1>ユーザー登録</h1>
     

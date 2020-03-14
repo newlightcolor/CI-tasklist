@@ -17,7 +17,7 @@ class User extends CI_Controller {
         $this->form_validation->set_rules('username', 'ユーザー名', 'trim|required|alpha|min_length[3]|max_length[50]');
         $this->form_validation->set_rules('email', 'メールアドレス', 'trim|required|valid_email|is_unique[user.email]');
         $this->form_validation->set_rules('password', 'パスワード', 'trim|required|matches[cpassword]');
-        $this->form_validation->set_rules('cpassword', 'Confirm Password', 'trim|required');
+        $this->form_validation->set_rules('cpassword', 'パスワード再入力', 'trim|required');
         $data['title'] = 'Register';
 
         if($this->form_validation->run() === FALSE){
@@ -41,14 +41,14 @@ class User extends CI_Controller {
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
         $this->form_validation->set_rules('password', 'Password', 'trim|required|md5');
 
-        if($this->form_validation->run() === FALSE)
+        if($this->form_validation->run() == FALSE)
         {
             $this->load->view('login');
         }else{
             if($user = $this->user_model->get_user_login($email, $password))
             {
                 $this->session->set_userdata('email', $email);
-                $this->session->set_userdata('user_id', $user['id']);
+                $this->session->set_userdata('id', $user['id']);
                 $this->session->set_userdata('is_logged_in', true);
 
                 $this->load->view('logout');
@@ -56,6 +56,19 @@ class User extends CI_Controller {
                 $this->session->set_flashdata('msg_error', 'Login credentials does match!');
                 redirect('user/login');
             }
+        }
+    }
+
+    public function logout()
+    {
+        if ($this->session->userdata('is_logged_in') == true){
+            $this->session->unset_userdata('email');
+            $this->session->unset_userdata('is_logged_in');
+            $this->session->unset_userdata('id');
+
+            $this->load->view('login');
+        }else{
+            redirect(base_url());
         }
     }
     
