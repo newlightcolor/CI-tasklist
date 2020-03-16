@@ -5,16 +5,16 @@
         <ul class="navbar-nav ml-auto">
             <?php if ($this->session->userdata('is_logged_in') == true){ ?>
 
-                <li class="nav-item mx-2">
+                <li class="nav-item ml-auto">
                     <a class="btn text-white" href="<?php echo site_url('user/logout') ?>" style="border: 1px solid white">ログアウト</a>
                 </li>
                 
             <?php }else{ ?>
                     
-                <li class="nav-item mx-2 my-2">
+                <li class="nav-item ml-auto mr-2 my-2">
                     <a class="btn text-white" href="<?php echo site_url('user/login') ?>" style="border: 1px solid white">ログイン</a>
                 </li>
-                <li class="nav-item my-2">
+                <li class="nav-item ml-auto my-2">
                     <a class="btn btn-primary" href="<?php echo site_url('user/register') ?>">ユーザー登録</a>
                 </li>
 
@@ -23,7 +23,7 @@
         
     </div>
  
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="ナビゲーションの切替">
+    <button class="navbar-toggler ml-auto my-2" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="ナビゲーションの切替">
       <span class="navbar-toggler-icon"></span>
     </button>
     
