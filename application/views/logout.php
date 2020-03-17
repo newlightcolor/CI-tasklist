@@ -15,5 +15,6 @@
     <p>You have successfully logged in!</p>
     <input type="button" onclick="location.href='<?php echo site_url('user/logout'); ?>'" value="Logout">
 
+<?php $this->load->view('common/read_bootstrap') ?>
 </body>
 </html>

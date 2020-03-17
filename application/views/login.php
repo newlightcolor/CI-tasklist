@@ -19,5 +19,7 @@
         <?php echo form_close(); ?>
     </div>
 
+    <?php $this->load->view('common/read_bootstrap') ?>
+
 </body>
 </html>

@@ -53,4 +53,4 @@
 </nav>
 
     <!-- ナビゲーションバーがメイン画面の被らないための余白 -->
-    <div style="height: 59px"></div>
+    <div style="height: 63px"></div>

@@ -53,4 +53,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // $route['default_controller'] = 'welcome';
 $route ['task/(:any)'] = 'task/show/$1';
 $route['task'] = 'task';
-$route[('default_controller')] = 'task';
+$route[('default_controller')] = 'welcome';
